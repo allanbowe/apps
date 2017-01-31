@@ -15,4 +15,4 @@ create table sendmeback as
 /* send result back to SAS */
 %hfsHeader;
 %hfsOutDataset(sasdata,WORK, sendmeback);
-%hfsFooter
+%hfsFooter;
