@@ -11,9 +11,9 @@ $(document).ready(function(){
     adapter.call('/Web/classdemo', h54sTables, function (err, res) {
       if (err!=undefined) { console.log(err); return; }
       var i, cols = new Array;
-      for (i in res.sasdata[0]) { cols.push(i); }
+      for (i in res.SASDATA[0]) { cols.push(i); }
       var hot = new Handsontable($('#hotContainer').get(0), {
-        data: res.sasdata
+        data: res.SASDATA
         , colHeaders: cols
         , columnSorting: true
         , sortIndicator: true
