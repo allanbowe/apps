@@ -1,6 +1,3 @@
-/* compile Boemska data connector macros */
-%inc "SASEnvironment\SASCode\Programs\h54short.sas";
-
 /* convert input table (macro variable) into (.sas7bdat) dataset */
 %hfsGetDataset(H54sTable, SASTable);
 
