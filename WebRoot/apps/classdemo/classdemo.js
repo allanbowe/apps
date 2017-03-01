@@ -10,8 +10,9 @@ $(document).ready(function(){
     var h54sTables = new h54s.Tables(dataset,'H54sTable');
     adapter.call('/Web/classdemo', h54sTables, function (err, res) {
       if (err!=undefined) { console.log(err); return; }
-      var i, cols = new Array;
-      for (i in res.SASDATA[0]) { cols.push(i); }
+      var colName=null
+        , cols=[];
+      for (colName in res.SASDATA[0]) { cols.push(colName); }
       var hot = new Handsontable($('#hotContainer').get(0), {
         data: res.SASDATA
         , colHeaders: cols
